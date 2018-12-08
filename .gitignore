@@ -54,6 +54,6 @@ fabric.properties
 .idea/httpRequests
 
 
-*.imi
+*.iml
 
 /env
