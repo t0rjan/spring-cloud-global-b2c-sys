@@ -55,5 +55,5 @@ fabric.properties
 
 
 *.iml
-
 /env
+/*/target
