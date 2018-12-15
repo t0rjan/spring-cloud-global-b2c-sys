@@ -556,7 +556,7 @@ public class ShoppingCartServiceImpl extends SalesManagerEntityServiceImpl<Long,
 
   @Override
   public void deleteShoppingCartItem(Long id) {
-    shoppingCartItemRepository.delete(id);
+    shoppingCartItemRepository.deleteById(id);
   }
 
 }
