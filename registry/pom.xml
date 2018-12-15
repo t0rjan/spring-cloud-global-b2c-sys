@@ -13,6 +13,7 @@
 		<groupId>com.jiunisi</groupId>
 		<artifactId>jiunisi</artifactId>
 		<version>1.0-SNAPSHOT</version>
+		<relativePath>../parent/pom.xml</relativePath>
 	</parent>
 
 	<dependencies>
