@@ -210,27 +210,27 @@
 
 	<authentication-manager id="adminAuthenticationManager">
 		<authentication-provider user-service-ref="userDetailsService">
-			<password-encoder ref="passwordEncoder" hash="sha"/>
+			<password-encoder ref="passwordEncoder" hash="bcrypt"/>
 		</authentication-provider>
 	</authentication-manager>
 	
 	<authentication-manager id="customerAuthenticationManager">
 		<authentication-provider user-service-ref="customerDetailsService">
-			<password-encoder ref="passwordEncoder" hash="sha"/>
+			<password-encoder ref="passwordEncoder" hash="bcrypt"/>
 		</authentication-provider>
 	</authentication-manager>
 
 	<!-- Authenticates API -->
  	<authentication-manager id="jwtCustomerAuthenticationManager">
 		<authentication-provider user-service-ref="jwtCustomerDetailsService">
-			<password-encoder ref="passwordEncoder" hash="sha"/>
+			<password-encoder ref="passwordEncoder" hash="bcrypt"/>
 		</authentication-provider>
 	</authentication-manager>
 	
 			<!-- Authenticates admin API -->
  	<authentication-manager id="jwtAdminAuthenticationManager">
 		<authentication-provider user-service-ref="jwtUserDetailsService">
-			<password-encoder ref="passwordEncoder" hash="sha"/>
+			<password-encoder ref="passwordEncoder" hash="bcrypt"/>
 		</authentication-provider>
 	</authentication-manager>
 	
