@@ -13,4 +13,7 @@ public interface ShippingQuoteRepository extends JpaRepository<Quote, Long> {
   @Query("select q from Quote as q where q.orderId = ?1")
   List<Quote> findByOrder(Long order);
 
+  @Query("select q from Quote as q where q.Id = ?1")
+  Quote findOne(Long id);
+
 }

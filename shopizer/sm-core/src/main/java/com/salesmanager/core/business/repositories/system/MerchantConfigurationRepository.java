@@ -21,6 +21,9 @@ public interface MerchantConfigurationRepository extends
   @Query("select m from MerchantConfiguration m join fetch m.merchantStore ms where ms.id=?1 and m.key=?2")
   MerchantConfiguration findByMerchantStoreAndKey(Integer id, String key);
 
+  @Query("select m from MerchantConfiguration m where m.id=?1")
+  MerchantConfiguration findOne(Long id);
+
   @Query("select m from MerchantConfiguration m join fetch m.merchantStore ms where ms.id=?1 and m.merchantConfigurationType=?2")
   List<MerchantConfiguration> findByMerchantStoreAndType(Integer id,
       MerchantConfigurationType type);

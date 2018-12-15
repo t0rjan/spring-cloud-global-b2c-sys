@@ -36,9 +36,9 @@ public abstract class SalesManagerEntityServiceImpl<K extends Serializable & Com
     return objectClass;
   }
 
-
-  public Optional<E> getById(K id) {
-    return repository.findOne(id);
+  public E getById(K id) {
+//    return repository.findOne(id);
+    return repository.getOne(id);
   }
 
 
